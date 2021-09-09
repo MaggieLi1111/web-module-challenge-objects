@@ -57,6 +57,8 @@ const burger = {
     }
     else if(string === "public"){
      return this.price *0.9 ;
+    }else{
+      return "sorry, no discount!";
     }
   }
 }
@@ -90,6 +92,7 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
+
 reviews[7].feedback = 'this place is chill with really cool people, great for getting work done on weekdays';
 console.log(reviews);
 
@@ -105,13 +108,11 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 
-function addReview(name,rating,feedback){
+function addReview(array){
   
-  reviews.push(object);
-  return reviews;
+  reviews.push({name: "Daniela", rating: 5, review: "Beautiful atmosphere and wonderful vegan options!"});
 }
-
-console.log(addReview("Daniela", 5, "Beautiful atmosphere and wonderful vegan options!"));
+console.log(reviews);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -126,10 +127,7 @@ Use the getReviewByIndex function below to do the following:
 
 
 function getReviewByIndex(array,number) {
-  this.name = array[number].name;
-  this.rating = array[number].rating;
-  this.feedback = array[number].feedback;
-  return `${name} gave the restaurant a ${rating} star review, and their feedback was : ${feedback}`;
+  return `${array[number].name} gave the restaurant a ${array[number].rating} star review, and their feedback was : ${array[number].feedback}`;
 }
 
 console.log(getReviewByIndex(reviews,0));
@@ -148,9 +146,9 @@ Use the getLastReview function below to do the following:
 
 
 function getLastReview(array) {
-  return `${name} gave the restaurant a ${rating} star review, and their feedback was: ${feedback}`;
+  return `${array[array.length-1].name} gave the restaurant a ${array[array.length-1].rating} star review, and their feedback was: ${array[array.length-1].feedback}`;
 } 
-console.log(getLastReviews(reviews));
+console.log(getLastReview(reviews));
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 

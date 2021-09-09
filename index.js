@@ -94,6 +94,7 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
 */
 
 reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+
 console.log(reviews);
 
 
@@ -109,11 +110,10 @@ Write a function that creates an object with name, rating, feedback, add the new
 */
 
 function addReview(array){
-  
-  array.push({name: "Daniela", rating: 5, feedback: "Beautiful atmosphere and wonderful vegan options!"});
+  array.push({name: 'Daniela', rating: 5, review: 'Beautiful atmosphere and wonderful vegan options!' });
   return array;
 }
-console.log(reviews);
+console.log(addReview(reviews));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
